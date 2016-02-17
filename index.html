@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html ng-app="amMaps">
-  <head>
-    <meta charset="utf-8">
-    <title>Angular ammaps directive</title>
-    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
-    <script src="bower_components/ammap3/ammap/ammap.js" charset="utf-8"></script>
-    <script src="bower_components/ammap3/ammap/maps/js/worldLow.js" charset="utf-8"></script>
-    <script src="bower_components/ammap3/ammap/themes/chalk.js" charset="utf-8"></script>
-    <script src="bower_components/ammap3/ammap/maps/js/continentsLow.js" charset="utf-8"></script>
-    <script src="app/app.js" charset="utf-8"></script>
-    <script src="app/directives/am-map.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <body>
-      <am-map id="map1"></am-map>
-    </body>
-  </body>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular ammaps directive</title>
+  <link rel="stylesheet" href="app/css/amcharts.css" media="screen" title="no title" charset="utf-8">
+  <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+  <script src="bower_components/amcharts3/amcharts/amcharts.js" charset="utf-8"></script>
+  <script src="bower_components/amcharts3/amcharts/serial.js" charset="utf-8"></script>
+  <script src="bower_components/ammap3/ammap/ammap.js" charset="utf-8"></script>
+  <script src="bower_components/ammap3/ammap/maps/js/worldLow.js" charset="utf-8"></script>
+  <script src="bower_components/ammap3/ammap/themes/chalk.js" charset="utf-8"></script>
+  <script src="bower_components/ammap3/ammap/maps/js/continentsLow.js" charset="utf-8"></script>
+  <script src="app/app.js" charset="utf-8"></script>
+  <script src="app/controllers/map-controller.js" charset="utf-8"></script>
+  <!-- <script src="app/directives/am-map.js" charset="utf-8"></script> -->
+</head>
+
+<body>
+  <div ng-controller="MapCtrl">
+    <chart id="map1" config="config"></chart>
+  </div>
+  <div ng-controller="ChartCtrl">
+    <chart id="chart1" config="config"></chart>
+  </div>
+</body>
+
 </html>
